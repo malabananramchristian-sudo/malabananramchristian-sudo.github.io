@@ -1,0 +1,112 @@
+/* style.css - Ram Christian S. Malabanan - CSCC 1 Final Project */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #0f2a5c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 { font-size: 28px; }
+header p { color: #cfe0ff; }
+
+nav {
+  background: #1e4fa3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: white;
+  color: #1e4fa3;
+}
+
+main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+
+.hero, .card, article, .gallery-item, form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.hero img, .card img, article img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  display: block;
+  margin: 10px auto;
+}
+
+h2 { color: #0f2a5c; margin-bottom: 10px; }
+h3 { color: #1e4fa3; margin: 10px 0 5px; }
+
+.btn {
+  display: inline-block;
+  background: #1e4fa3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.btn:hover { background: #0f2a5c; transform: scale(1.05); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.gallery-item img { width: 100%; border-radius: 10px; }
+.gallery-item:hover { transform: scale(1.03); transition: 0.3s; }
+
+ul { margin-left: 20px; margin-bottom: 10px; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button {
+  background: #1e4fa3; color: white; border: none;
+  padding: 12px 20px; border-radius: 20px; font-weight: bold;
+}
+button:hover { background: #0f2a5c; cursor: pointer; }
+
+footer {
+  background: #0f2a5c; color: white; text-align: center;
+  padding: 15px; margin-top: 20px;
+}
+
+/* Responsive - para sa cellphone */
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 22px; }
+  nav a { padding: 6px 10px; font-size: 14px; }
+}
